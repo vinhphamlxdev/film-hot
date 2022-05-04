@@ -36,7 +36,8 @@ const SignIn = () => {
         toast.success(`Login successfully, hello ${user.displayName}`);
       })
       .catch((error) => {
-        console.log(error);
+        const errorMessage = error.message;
+        toast.error("Some thing went Wrong!!", errorMessage);
       });
   };
 
