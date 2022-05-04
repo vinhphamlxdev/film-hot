@@ -37,7 +37,7 @@ const SignIn = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        toast.error("Some thing went Wrong!!", errorMessage);
+        toast.error("Something went Wrong!!", errorMessage);
       });
   };
 
