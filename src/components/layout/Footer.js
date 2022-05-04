@@ -18,7 +18,7 @@ const Footer = () => {
         }}
       >
         <div className="container">
-          <div className="relative z-20 grid grid-cols-3 lg:grid-cols-2 gap-x-6 ms:grid-cols-1">
+          <div className="relative z-20 grid grid-cols-4 lg:grid-cols-2 gap-x-6 ms:grid-cols-1">
             <div className="flex flex-col lg:mb-5 ">
               <h3 className="text-xl font-semibold text-white mb-[25px]">
                 Explore
@@ -76,6 +76,25 @@ const Footer = () => {
                 </li>
                 <li className=" text-base mb-[10px] cursor-pointer text-white ">
                   Contact
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col lg:mb-5 ">
+              <h3 className="text-xl font-semibold text-white mb-[25px]">
+                Community
+              </h3>
+              <ul className="flex flex-col">
+                <li className=" text-base mb-[10px] cursor-pointer text-white ">
+                  Guidelines
+                </li>
+                <li className=" text-base mb-[10px] cursor-pointer text-white ">
+                  Discussions
+                </li>
+                <li className=" text-base mb-[10px] cursor-pointer text-white ">
+                  Leaderboard
+                </li>
+                <li className=" text-base mb-[10px] cursor-pointer text-white ">
+                  Twitter
                 </li>
               </ul>
             </div>

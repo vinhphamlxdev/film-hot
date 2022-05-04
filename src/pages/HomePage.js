@@ -81,7 +81,6 @@ const HomePage = () => {
           <h2 className="text-2xl font-bold text-white movie-type">
             Tv On The Air
           </h2>
-          <i className="pl-2 mt-1 text-xs bi text-starIcon bi-star-fill"></i>
           <span className="flex items-center text-base text-textColor ">
             All movie<i className="bi bi-chevron-right"></i>
           </span>
@@ -93,7 +92,6 @@ const HomePage = () => {
           <h2 className="text-2xl font-bold text-white movie-type">
             Tv Airing Today
           </h2>
-          <i className="pl-2 mt-1 text-xs bi text-starIcon bi-star-fill"></i>
           <span className="flex items-center text-base text-textColor ">
             All movie<i className="bi bi-chevron-right"></i>
           </span>
