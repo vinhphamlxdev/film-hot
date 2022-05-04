@@ -1,0 +1,26 @@
+.card-movie-list::-webkit-scrollbar {
+  display: none;
+  width: 4px;
+}
+.card-movie-list:hover::-webkit-scrollbar {
+  display: inline-block;
+  width: 4px;
+}
+.card-movie-list::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-t from-pink-500 to-yellow-500;
+  border-radius: 12px;
+}
+// .border-gradient {
+//   position: relative;
+//   background-clip: padding-box;
+//   border: 1px solid transparent;
+//   @apply rounded-lg;
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     inset: 0;
+//     margin: -1px;
+//     border-radius: inherit;
+//     @apply bg-gradient-to-r from-pink-500 to-yellow-500;
+//   }
+// }
