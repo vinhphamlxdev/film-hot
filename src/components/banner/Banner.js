@@ -1,16 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useSWR from "swr";
-import { fetcher, tmdbAPI } from "service/config";
+import { fetcher, tmdbAPI } from "../../service/config";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Banner = () => {
   SwiperCore.use([Autoplay]);
 
   const [movies, setMovies] = useState([]);
   const { data } = useSWR(tmdbAPI.getMovieList("movie", "popular"), fetcher);
-  const { category, movieId } = useParams();
   useEffect(() => {
     if (data && data.results) {
       setMovies(data.results);
