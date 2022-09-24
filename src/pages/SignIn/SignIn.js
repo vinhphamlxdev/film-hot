@@ -6,10 +6,8 @@ import { useLoginStore } from "../../components/User/User";
 import { signInWithPopup } from "firebase/auth";
 import {
   authentication,
-  db,
-  providerFacebook,
   providerGoogle,
-} from "firebase-app/firebaseConfig";
+} from "../../firebase-app/firebaseConfig";
 import { toast } from "react-toastify";
 const SignIn = () => {
   const navigate = useNavigate();
