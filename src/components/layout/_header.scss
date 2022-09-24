@@ -1,0 +1,55 @@
+.header.isSticky {
+  @apply bg-bgCardMovie;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @apply shadow-bgShadow;
+}
+.menu-icon-bar {
+  .hamburger {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    &::before,
+    &::after {
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      transition: 0.5s;
+      content: "";
+    }
+    &::after {
+      top: 10px;
+    }
+    &::before {
+      top: -10px;
+    }
+  }
+  &.active .hamburger {
+    background: transparent;
+  }
+  &.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  &.active .hamburger::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+}
+.user-info::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: transparent;
+  height: 20px;
+  top: -10px;
+}
+.user-avatar:hover .user-info {
+  display: block;
+}

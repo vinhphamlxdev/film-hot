@@ -1,0 +1,20 @@
+.back-top {
+  position: fixed;
+  display: flex;
+  bottom: -100px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+  opacity: 0;
+  visibility: hidden;
+  &.show {
+    bottom: 60px;
+    top: initial;
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,142 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #000000;
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+i {
+  line-height: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.banner-detail::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.95));
+}
+.footer-section::after {
+  background: #000000;
+  opacity: 0.7;
+  z-index: -1;
+}
+.sidebar-nav {
+  overflow: hidden overlay;
+  overscroll-behavior: contain;
+  will-change: scroll-position;
+}
+
+.main-section {
+  overflow: hidden overlay;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.sidebar-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sidebar-menu {
+  overflow: hidden overlay;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  display: none;
+  width: 4px;
+}
+
+.movie-title {
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.movie-cart-btn svg {
+  background-color: hsl(0deg 9% 50% / 10%);
+  color: white;
+}
+.menu-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.menu-bar::before,
+.menu-bar::after {
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.5s;
+  content: "";
+}
+.menu-bar.active {
+  background: transparent;
+}
+.menu-bar::after {
+  top: 10px;
+}
+.menu-bar::before {
+  top: -10px;
+}
+.menu-bar.active .menu-bar::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.menu-bar.active .menu-bar::after {
+  top: 0;
+  transform: rotate(135deg);
+}
