@@ -8,9 +8,9 @@ import { useLoginStore } from "./components/User/User";
 import { authentication } from "./firebase-app/firebaseConfig";
 import { LoadingScreen } from "components/loading";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoadingScreen } from "redux-config/global/globalSlice";
 import { publicRoutes } from "./routes";
 import { DefaultLayout } from "components/layout";
+import { setLoadingScreen } from "./redux-config/global/globalSlice";
 
 function App() {
   const setUser = useLoginStore((state) => state.setUser);
