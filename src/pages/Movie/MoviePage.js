@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useSWR from "swr";
-import MovieCard from "components/movie/MovieCard";
-import { apiKey, fetcher } from "service/config";
-import useDebounce from "hooks/useDebounce";
+import MovieCard from "../../components/movie/MovieCard";
+import { apiKey, fetcher } from "../../service/config";
+import useDebounce from "../../hooks/useDebounce";
 import ReactPaginate from "react-paginate";
 const itemsPerPage = 20;
 const MoviePage = () => {

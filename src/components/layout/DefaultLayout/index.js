@@ -1,4 +1,4 @@
-import BackTop from "components/button/BackTop";
+import BackTop from "../../../components/button/BackTop";
 import Footer from "./Footer";
 import Header from "./Header";
 import SidebarMenu from "./Sidebar";

@@ -1,14 +1,14 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import defaultAvatar from "assets/avatardefault.png";
+import defaultAvatar from "../../assets/avatardefault.png";
 import useSWR from "swr";
-import { apiKey, fetcher, tmdbAPI } from "service/config";
-import timeImg from "assets/time.png";
-import MovieList from "components/movie/MovieList";
-import { useLoginStore } from "components/User/User";
+import { apiKey, fetcher, tmdbAPI } from "../../service/config";
+import timeImg from "../../assets/time.png";
+import MovieList from "../../components/movie/MovieList";
+import { useLoginStore } from "../../components/User/User";
 import { toast } from "react-toastify";
 import { collection, addDoc, getDocs, where, query } from "firebase/firestore";
-import { db } from "firebase-app/firebaseConfig";
+import { db } from "../../firebase-app/firebaseConfig";
 
 const VideoPage = () => {
   const user = useLoginStore((state) => state.user);

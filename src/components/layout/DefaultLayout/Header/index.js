@@ -3,12 +3,12 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { GiFilmSpool } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
-import SidebarMenu from "components/layout/DefaultLayout/Sidebar";
-import useClickOutSide from "hooks/useClickOutSide";
-import { useLoginStore } from "components/User/User";
+import SidebarMenu from "../Sidebar";
+import useClickOutSide from "../../../../hooks/useClickOutSide";
+import { useLoginStore } from "../../../../components/User/User";
 import { toast } from "react-toastify";
 import { signOut } from "firebase/auth";
-import { authentication } from "firebase-app/firebaseConfig";
+import { authentication } from "../../../../firebase-app/firebaseConfig";
 import MenuItem from "./Menu/MenuItem";
 const Header = (props) => {
   const navigate = useNavigate();

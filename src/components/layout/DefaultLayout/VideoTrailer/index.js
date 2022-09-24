@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
-import { apiKey, fetcher } from "service/config";
+import { apiKey, fetcher } from "../../../../service/config";
 
 const VideoTrailer = ({ open = false, handleClose = () => {}, title }) => {
   const { movieId } = useParams();

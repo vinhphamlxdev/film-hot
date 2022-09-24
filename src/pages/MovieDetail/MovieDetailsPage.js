@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
-import { fetcher, tmdbAPI } from "service/config";
-import VideoTrailer from "components/layout/DefaultLayout/VideoTrailer";
-import Recomment from "components/layout/DefaultLayout/Recommend";
-import Credits from "components/layout/DefaultLayout/Credits";
+import { fetcher, tmdbAPI } from "../../service/config";
+import VideoTrailer from "../../components/layout/DefaultLayout";
+import Recomment from "../../components/layout/DefaultLayout";
+import Credits from "../../components/layout/DefaultLayout";
 
 const MovieDetailsPage = () => {
   const { category, movieId } = useParams();

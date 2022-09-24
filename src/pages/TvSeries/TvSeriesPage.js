@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import { apiKey, fetcher } from "service/config";
+import { apiKey, fetcher } from "../../service/config";
 import useSWRInfinite from "swr/infinite";
-import MovieCard from "components/movie/MovieCard";
+import MovieCard from "../../components/movie/MovieCard";
 const itemsPerPage = 20;
 
 const TvSeriesPage = () => {

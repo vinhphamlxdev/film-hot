@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
-import { apiKey, fetcher, tmdbAPI } from "service/config";
+import { apiKey, fetcher, tmdbAPI } from "../../../../service/config";
 
 const Credits = ({ category }) => {
   const { movieId } = useParams();

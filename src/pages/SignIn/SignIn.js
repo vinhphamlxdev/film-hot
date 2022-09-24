@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import bgSignIn from "assets/bgSignup.jpg";
-import googleIcon from "assets/google.svg";
-import facebookIcon from "assets/facebook.svg";
-import { useLoginStore } from "components/User/User";
+import bgSignIn from "../../assets/bgSignup.jpg";
+import googleIcon from "../../assets/google.svg";
+import { useLoginStore } from "../../components/User/User";
 import { signInWithPopup } from "firebase/auth";
 import {
   authentication,

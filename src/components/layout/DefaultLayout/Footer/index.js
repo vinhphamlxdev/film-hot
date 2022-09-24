@@ -1,5 +1,5 @@
 import React from "react";
-import bgSignUp from "assets/bgSignup.jpg";
+import bgSignUp from "../../../../assets/bgSignup.jpg";
 import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TiSocialPinterest } from "react-icons/ti";
 const Footer = () => {

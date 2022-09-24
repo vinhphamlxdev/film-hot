@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useSWR from "swr";
-import { fetcher, tmdbAPI } from "service/config";
-import MovieCard from "components/movie/MovieCard";
+import { fetcher, tmdbAPI } from "../../../../service/config";
+import MovieCard from "../../../../components/movie/MovieCard";
 
 const Recomment = () => {
   const [movies, setMovies] = useState([]);

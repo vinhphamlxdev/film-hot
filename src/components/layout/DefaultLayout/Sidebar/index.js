@@ -3,10 +3,10 @@ import React, { Fragment } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { GiFilmSpool } from "react-icons/gi";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
-import { authentication } from "firebase-app/firebaseConfig";
-import { useLoginStore } from "components/User/User";
+import { authentication } from "../../../../firebase-app/firebaseConfig";
+import { useLoginStore } from "../../../User/User";
 import MenuItem from "../Header/Menu/MenuItem";
 const SidebarMenu = React.forwardRef((props, ref) => {
   const user = useLoginStore((state) => state.user);

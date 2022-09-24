@@ -1,12 +1,12 @@
 import { lazy } from "react";
-const HomePage = lazy(() => import("pages/Home/HomePage"));
-const MoviePage = lazy(() => import("pages/Movie/MoviePage"));
-const TvSeriesPage = lazy(() => import("pages/TvSeries/TvSeriesPage"));
+const HomePage = lazy(() => import("../pages/Home/HomePage"));
+const MoviePage = lazy(() => import("../pages/Movie/MoviePage"));
+const TvSeriesPage = lazy(() => import("../pages/TvSeries/TvSeriesPage"));
 const MovieDetailsPage = lazy(() =>
-  import("pages/MovieDetail/MovieDetailsPage")
+  import("../pages/MovieDetail/MovieDetailsPage")
 );
-const VideoPage = lazy(() => import("pages/Video/VideoPage"));
-const SignIn = lazy(() => import("pages/SignIn/SignIn"));
+const VideoPage = lazy(() => import("../pages/Video/VideoPage"));
+const SignIn = lazy(() => import("../pages/SignIn/SignIn"));
 
 //  public Router
 export const publicRoutes = [
