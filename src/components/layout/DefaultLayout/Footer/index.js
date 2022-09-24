@@ -1,9 +1,6 @@
 import React from "react";
-import bgSignUp from "../../assets/bgSignup.jpg";
-
-import { RiFacebookFill } from "react-icons/ri";
-import { RiTwitterFill } from "react-icons/ri";
-import { RiLinkedinFill } from "react-icons/ri";
+import bgSignUp from "assets/bgSignup.jpg";
+import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TiSocialPinterest } from "react-icons/ti";
 const Footer = () => {
   return (

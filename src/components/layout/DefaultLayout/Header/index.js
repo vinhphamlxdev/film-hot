@@ -1,14 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { useNavigate, Link, NavLink, useParams } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { GiFilmSpool } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
-import SidebarMenu from "./SidebarMenu";
-import useClickOutSide from "../../hooks/useClickOutSide";
-import { useLoginStore } from "../User/User";
+import SidebarMenu from "components/layout/DefaultLayout/Sidebar";
+import useClickOutSide from "hooks/useClickOutSide";
+import { useLoginStore } from "components/User/User";
 import { toast } from "react-toastify";
 import { signOut } from "firebase/auth";
-import { authentication } from "../../firebase-app/firebaseConfig";
+import { authentication } from "firebase-app/firebaseConfig";
+import MenuItem from "./Menu/MenuItem";
 const Header = (props) => {
   const navigate = useNavigate();
   const user = useLoginStore((state) => state.user);
@@ -47,51 +48,27 @@ const Header = (props) => {
       >
         <div className="flex items-center justify-between ">
           <div className="flex items-center">
-            <div onClick={() => navigate(`/`)} className="cursor-pointer logo">
+            <NavLink to={"/"} className="cursor-pointer logo">
               <GiFilmSpool className="text-[50px]  text-red-500"></GiFilmSpool>
-            </div>
+            </NavLink>
             <div className="flex items-center pl-10 lg:hidden lg:pl-6">
               <div className="px-4 text-base font-medium transition-all duration-500 whitespace-nowrap ">
-                <NavLink
-                  to={"/"}
-                  className={({ isActive }) =>
-                    isActive ? " title-primary" : ""
-                  }
-                >
-                  Home
-                </NavLink>
+                <MenuItem to={"/"} title="Home" />
               </div>
               <div className="px-4 text-base font-medium transition-all duration-500 whitespace-nowrap ">
-                <NavLink
-                  to={"/movies"}
-                  className={({ isActive }) =>
-                    isActive ? " title-primary" : ""
-                  }
-                >
-                  Movies
-                </NavLink>
+                <MenuItem to={"/movies"} title="Movies" />
               </div>
               <div className="px-4 text-base font-medium transition-all duration-500 whitespace-nowrap ">
-                <NavLink
-                  to={"/tv-series"}
-                  className={({ isActive }) =>
-                    isActive ? " title-primary" : ""
-                  }
-                >
-                  TV Series
-                </NavLink>
+                <MenuItem to={"/tv-series"} title="TV Series" />
               </div>
             </div>
           </div>
         </div>
 
         <ul className="flex items-center justify-end lg:hidden ">
-          <li
-            onClick={() => navigate(`/movies`)}
-            className="mr-6 cursor-pointer sx:hidden "
-          >
+          <NavLink to={"/movies"} className="mr-6 cursor-pointer sx:hidden ">
             <i className="text-lg text-white bi bi-search"></i>
-          </li>
+          </NavLink>
           {user ? (
             <li className="cursor-pointer sx:mx-0">
               <div className="relative w-8 h-8 rounded-full user-avatar ">

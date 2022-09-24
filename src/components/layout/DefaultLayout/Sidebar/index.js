@@ -5,8 +5,9 @@ import { FiLogOut } from "react-icons/fi";
 import { GiFilmSpool } from "react-icons/gi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { authentication } from "../../firebase-app/firebaseConfig";
-import { useLoginStore } from "../User/User";
+import { authentication } from "firebase-app/firebaseConfig";
+import { useLoginStore } from "components/User/User";
+import MenuItem from "../Header/Menu/MenuItem";
 const SidebarMenu = React.forwardRef((props, ref) => {
   const user = useLoginStore((state) => state.user);
 
@@ -40,67 +41,27 @@ const SidebarMenu = React.forwardRef((props, ref) => {
             </div>
             <div className="flex flex-col gap-y-6 ">
               <div className="flex items-center gap-x-3">
-                <NavLink
+                <MenuItem
                   to={"/"}
-                  className={({ isActive }) =>
-                    isActive ? "title-primary" : ""
+                  title="Home"
+                  icon={
+                    <i className="text-2xl text-white bi bi-house-door-fill"></i>
                   }
-                >
-                  <i className="text-2xl text-white bi bi-house-door-fill"></i>
-                </NavLink>
-
-                <div className="text-xl text-white">
-                  <NavLink
-                    to={"/"}
-                    className={({ isActive }) =>
-                      isActive ? "title-primary" : ""
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </div>
+                />
               </div>
               <div className="flex items-center gap-3">
-                <NavLink
+                <MenuItem
                   to={"/movies"}
-                  className={({ isActive }) =>
-                    isActive ? "title-primary" : ""
-                  }
-                >
-                  <i className="text-2xl text-white bi bi-compass"></i>
-                </NavLink>
-
-                <div className="text-xl text-white">
-                  <NavLink
-                    to={"/movies"}
-                    className={({ isActive }) =>
-                      isActive ? "title-primary" : ""
-                    }
-                  >
-                    Movies
-                  </NavLink>
-                </div>
+                  title="Movies"
+                  icon={<i className="text-2xl text-white bi bi-compass"></i>}
+                />
               </div>
               <div className="flex items-center gap-3">
-                <NavLink
+                <MenuItem
                   to={"/tv-series"}
-                  className={({ isActive }) =>
-                    isActive ? "title-primary" : ""
-                  }
-                >
-                  <i className="text-2xl text-white bi bi-tv"></i>
-                </NavLink>
-
-                <div className="text-xl text-white">
-                  <NavLink
-                    to={"/tv-series"}
-                    className={({ isActive }) =>
-                      isActive ? "title-primary" : ""
-                    }
-                  >
-                    TV Series
-                  </NavLink>
-                </div>
+                  title="TV Series"
+                  icon={<i className="text-2xl text-white bi bi-tv"></i>}
+                />
               </div>
             </div>
             <div className="mt-10 mb-4 text-xl text-white text-opacity-50 uppercase">
@@ -109,12 +70,12 @@ const SidebarMenu = React.forwardRef((props, ref) => {
             {!user ? (
               <div className="flex items-center cursor-pointer gap-x-6">
                 <FaSignInAlt className="text-xl font-medium text-white"></FaSignInAlt>
-                <span
-                  onClick={() => navigate(`/sign-in`)}
+                <NavLink
+                  to={"/sign-in"}
                   className="text-lg text-white cursor-pointer"
                 >
                   Sign In
-                </span>
+                </NavLink>
               </div>
             ) : (
               <div className="flex flex-col gap-y-4">
@@ -134,7 +95,7 @@ const SidebarMenu = React.forwardRef((props, ref) => {
                   <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center">
                     <FiLogOut className="text-xl font-medium text-white"></FiLogOut>
                   </div>
-                  <span className="text-lg text-white">Sign Out</span>
+                  <button className="text-lg text-white">Sign Out</button>
                 </div>
               </div>
             )}
