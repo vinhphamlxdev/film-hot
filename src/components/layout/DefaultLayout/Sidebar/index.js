@@ -22,7 +22,6 @@ const SidebarMenu = React.forwardRef((props, ref) => {
       });
     toast.success("Logout successfully");
   };
-  const navigate = useNavigate();
   return (
     <Fragment>
       <div
