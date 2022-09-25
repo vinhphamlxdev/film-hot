@@ -71,7 +71,6 @@ const VideoPage = () => {
       name: user.displayName,
     };
     const data = { user: userComments, idMovie: movieId, comments: value };
-    console.log("day la data comment:", data);
     try {
       value.trim() !== ""
         ? addDoc(collection(db, "comments"), data)

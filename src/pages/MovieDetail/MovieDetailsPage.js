@@ -2,9 +2,9 @@ import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
 import { fetcher, tmdbAPI } from "../../service/config";
-import VideoTrailer from "../../components/layout/DefaultLayout";
-import Recomment from "../../components/layout/DefaultLayout";
-import Credits from "../../components/layout/DefaultLayout";
+import VideoTrailer from "../../components/layout/DefaultLayout/VideoTrailer";
+import Recomment from "../../components/layout/DefaultLayout/Recommend";
+import Credits from "../../components/layout/DefaultLayout/Credits";
 
 const MovieDetailsPage = () => {
   const { category, movieId } = useParams();
@@ -136,13 +136,13 @@ const MovieDetailsPage = () => {
         </div>
       </div>
       <div className="container mt-10">
-        <Credits category={category}></Credits>
+        <Credits category={category} />
         <VideoTrailer
           title={category}
           handleClose={() => setShow(false)}
           open={show}
-        ></VideoTrailer>
-        <Recomment></Recomment>
+        />
+        <Recomment />
       </div>
     </Fragment>
   );
